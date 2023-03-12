@@ -9,9 +9,8 @@ int InputInt(string msg)
 
 int RecSum(int m, int n, int sum)
 {
-    if (m == n - 1) return sum;
-    m +=1;
-    return sum += m + RecSum(m, n, sum);
+    if (m == n+1 ) return sum;
+    return sum += m + RecSum(m+1, n, sum);
 }
 
 
