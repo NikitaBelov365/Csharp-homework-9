@@ -5,7 +5,7 @@
 
 string RecNatur(int m, int n)
 {
-    if (m >= n-2) return $"{m}";
+    if (m >= n-1) return $"{m}";
     return $"{m} " + RecNatur(m + 2, n);
 }
 
@@ -18,7 +18,7 @@ int InputInt(string msg)
 int ReductionToEven(int number)
 {
     if (number % 2 != 0) return number +=1;
-    else return number +=2;
+    else return number;
 }
 
 int m = InputInt("Input minimum");
