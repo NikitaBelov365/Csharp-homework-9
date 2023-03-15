@@ -5,6 +5,7 @@
 
 string RecNatur(int m, int n)
 {
+    if (m %2 != 0) m += 1;
     if (m >= n-1) return $"{m}";
     return $"{m} " + RecNatur(m + 2, n);
 }
@@ -15,13 +16,7 @@ int InputInt(string msg)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int ReductionToEven(int number)
-{
-    if (number % 2 != 0) return number +=1;
-    else return number;
-}
-
 int m = InputInt("Input minimum");
 int n = InputInt("Input maximum");
-m = ReductionToEven(m);
+
 System.Console.Write(RecNatur(m, n));
