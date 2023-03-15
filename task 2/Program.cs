@@ -7,10 +7,10 @@ int InputInt(string msg)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int RecSum(int m, int n, int sum)
+int RecSum(int m, int n)
 {
-    if (m == n+1 ) return sum;
-    return sum += m + RecSum(m+1, n, sum);
+    if (m == n+1 ) return 0;
+    return m + RecSum(m+1, n);
 }
 
 
@@ -18,6 +18,6 @@ int RecSum(int m, int n, int sum)
 
 int m = InputInt("Input minimum");
 int n = InputInt("Input maximum");
-int sum = 0;
-int totalSum = RecSum(m, n, sum);
+
+int totalSum = RecSum(m, n);
 System.Console.WriteLine($"Sum of all natural numbers between {m} and {n} is equal {totalSum}");
